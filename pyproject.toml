@@ -1,0 +1,5 @@
+[project]
+name = "yolo-line-crossing-counter"
+version = "0.1.0"
+description = "Object Line-Crossing Counter"
+requires-python = ">=3.10"

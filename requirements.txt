@@ -4,6 +4,10 @@ opencv-python>=4.9
 numpy>=1.26
 pydantic>=2.6
 PyYAML>=6.0
+# lapx: linear assignment solver ultralytics' ByteTrack/BoT-SORT trackers
+# import directly (`import lap`) -- not pulled in automatically by
+# ultralytics itself, so model.track() fails without it.
+lapx>=0.5.2
 
 # Testing
 pytest>=7.4

@@ -4,3 +4,5 @@ confidence_threshold: 0.25
 class_filter:                # empty/omit to keep all COCO classes
   - person
 video_path: assets/sample_pedestrians_clip.mp4
+tracker: bytetrack.yaml      # Ultralytics tracker config; "botsort.yaml" also ships built-in
+track_buffer: 30             # frames a lost track survives (brief occlusion) before being dropped

@@ -15,6 +15,10 @@ class DetectionConfig(BaseModel):
     confidence_threshold: float = Field(default=0.25, ge=0.0, le=1.0)
     class_filter: list[str] | None = None
     video_path: str = "assets/sample_pedestrians_clip.mp4"
+    tracker: str = "bytetrack.yaml"  # Ultralytics tracker config name, e.g. "botsort.yaml"
+    track_buffer: int = Field(
+        default=30, ge=0, description="frames a lost track is kept before being dropped"
+    )
 
 
 def load_detection_config(path: str | Path) -> DetectionConfig:

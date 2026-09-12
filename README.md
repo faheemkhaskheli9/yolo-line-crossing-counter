@@ -4,7 +4,7 @@
 > This is an original, from-scratch build. It is not affiliated with, and does not
 > contain any code, prompts, data, or business logic from, any employer or client.
 
-![status](https://img.shields.io/badge/status-planned-lightgrey)
+![status](https://img.shields.io/badge/status-phase%201%20in%20progress-yellow)
 ![python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![license](https://img.shields.io/badge/license-MIT-green)
 
@@ -85,8 +85,16 @@ cp .env.example .env              # fill in API keys / config
 
 ## 8. Dataset
 
-Document which public dataset(s) or synthetic data generators are used here.
-No proprietary, employer-owned, or client-identifiable data is used in this project.
+`assets/sample_pedestrians_clip.mp4` is a short (3s, downscaled) trim of a
+public pedestrian-detection sample clip from
+[intel-iot-devkit/sample-videos](https://github.com/intel-iot-devkit/sample-videos)
+(MIT-licensed), kept small enough to check in for smoke-testing the detection
+pipeline end-to-end. Point `--video` at any other clip for a real run; no
+proprietary, employer-owned, or client-identifiable data is used in this project.
+
+Detection uses a pretrained Ultralytics YOLOv8n checkpoint (COCO classes,
+auto-downloaded on first use) — no training data of our own is required for
+Phase 1.
 
 ## 9. Training / Execution
 

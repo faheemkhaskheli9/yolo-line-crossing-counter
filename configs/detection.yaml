@@ -1,0 +1,6 @@
+# Phase 1 detection config — no code changes needed to retarget classes/model.
+weights: yolov8n.pt          # Ultralytics pretrained checkpoint (auto-downloaded on first use)
+confidence_threshold: 0.25
+class_filter:                # empty/omit to keep all COCO classes
+  - person
+video_path: assets/sample_pedestrians_clip.mp4

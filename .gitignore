@@ -17,6 +17,8 @@ models/*.pt
 models/*.onnx
 models/*.engine
 *.ckpt
+# ultralytics auto-download lands pretrained weights in the cwd
+/*.pt
 
 # Notebooks
 .ipynb_checkpoints/
@@ -24,7 +26,8 @@ models/*.engine
 # OS/IDE
 .DS_Store
 .idea/
-.vscode/
+.vscode/*
+!.vscode/launch.json
 
 # Docker
 *.log
